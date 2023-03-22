@@ -15,22 +15,24 @@
     <body>
         <div class="outer-container">
             <h1 id="game_title">Rock Paper Scissors</h1>
-            <div class="main_screen2">
+            <div id="game_screen" class="main_screen2">
+                <!--Change into single image then move buttons accordingly-->
                 <div class="rock_option">
                     <img src="images/rock.png" alt="An image of a rock." class="rock_img"/>
-                    <button class="choice_btn">Rock</button>
+                    <button id="rock_btn" class="choice_btn">Rock</button>
                 </div>
                 <div class="paper_option">
                     <img src="images/paper.png" alt="An image of a crumpled piece of paper." class="paper_img"/>
-                    <button class="choice_btn">Paper</button>
+                    <button id="paper_btn" class="choice_btn">Paper</button>
                 </div>
                 <div class="scissors_option">
                     <img src="images/scissors.png" alt="An image of a pair of scissors." class="scissors_img"/>
-                    <button class="choice_btn">Scissors</button>
+                    <button id="scissors_btn" class="choice_btn">Scissors</button>
                 </div>
             </div>
-            <h2 class="directions">Choose your move</h2>
+            <h2 id="response" class="directions">Choose your move</h2>
         </div>
+    <script src="script.js"></script>
     </body>
 
 

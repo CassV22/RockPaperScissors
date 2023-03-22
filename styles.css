@@ -36,13 +36,39 @@ button {
 }
 
 .rock_img, .paper_img, .scissors_img {
-    height: 250px;
+    height: 100%;
     width: 267px;
+    
 }
 
 .main_screen2 {
-    height: 500px;
+    height: 475px;
     width: 800px;
     display: flex;
     justify-content: center;
+}
+
+.choice_btn {
+    position: absolute;
+    bottom: 140px;    
+}
+
+.rock_option button {
+    left: 285px;
+}
+
+.paper_option button {
+    left: 555px;
+}
+
+.scissors_option button {
+    right: 285px;
+}
+
+.directions {
+    margin-top: 0;
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 0;
+    
 }

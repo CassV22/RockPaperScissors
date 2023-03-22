@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #008958;
+    font-family: 'Arima', cursive;
+    
+}
+#game_title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 55px;
+    font-weight: bolder;
+    color: #fff;
+
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;    
+       
+}
+
+.main_img {
+    height: 500px;
+    width: 800px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #4CFEBE;
+}
+
+.rock_img, .paper_img, .scissors_img {
+    height: 250px;
+    width: 267px;
+}
+
+.main_screen2 {
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}

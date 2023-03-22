@@ -35,35 +35,29 @@ button {
     background-color: #4CFEBE;
 }
 
-.rock_img, .paper_img, .scissors_img {
-    height: 100%;
-    width: 267px;
-    
+.rps_image {
+    margin-left: 30%;
 }
 
-.main_screen2 {
-    height: 475px;
-    width: 800px;
-    display: flex;
-    justify-content: center;
-}
+
 
 .choice_btn {
     position: absolute;
     bottom: 140px;    
+ } 
+
+#rock_btn {
+    left: 300px;
 }
 
-.rock_option button {
-    left: 285px;
-}
-
-.paper_option button {
+#paper_btn {
     left: 555px;
 }
 
-.scissors_option button {
-    right: 285px;
+#scissors_btn {
+    right: 315px;
 }
+
 
 .directions {
     margin-top: 0;

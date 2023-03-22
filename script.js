@@ -17,13 +17,13 @@ var rock_btn = document.getElementById("rock_btn");
 rock_btn.addEventListener("click", function(){
     //if statements here and screen changes
     if (computerChoice == 1) {
-        screen.style.backgroundImage = "url('images/tie.png)";
+        screen.src = 'images/tie.png';
         feedback.innerHTML = "It's a tie. Reload the page and try again.";        
     } else if (computerChoice == 2) {
-        screen.style.backgroundImage = "url('images/loser.gif)";
+        screen.src = 'images/loser.gif';
         feedback.innerHTML = "You lose. Paper covers rock.";  
     } else {
-        screen.style.backgroundImage = "url('images/winner.gif)";
+        screen.src = 'images/winner.gif';
         feedback.innerHTML = "You win! Rock beats scissors.";
     }
 

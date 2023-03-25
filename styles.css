@@ -5,20 +5,22 @@ body {
     font-family: 'Arima', cursive;
     
 }
+
 #game_title {
     margin-top: 5px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 55px;
     font-weight: bolder;
     color: #fff;
 
 }
 
+/****Layout for the 3 main sections of page****/
 .outer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;    
+    gap: 10px;    
        
 }
 
@@ -35,12 +37,12 @@ button {
     background-color: #4CFEBE;
 }
 
+/****Image on choice screen*****/
 .rps_image {
     margin-left: 30%;
 }
 
-
-
+/****Button to choose rock, paper, or scissors****/
 .choice_btn {
     position: absolute;
     bottom: 140px;    
@@ -58,7 +60,7 @@ button {
     right: 315px;
 }
 
-
+/****Text underneath choice screen****/
 .directions {
     margin-top: 0;
     color: #fff;

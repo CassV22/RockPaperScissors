@@ -37,16 +37,9 @@ button {
     background-color: #4CFEBE;
 }
 
-/****Image on choice screen*****/
-.rps_image {
-    margin-left: 30%;
-}
+
 
 /****Button to choose rock, paper, or scissors****/
-.choice_btn {
-    position: absolute;
-    bottom: 140px;    
- } 
 
 #rock_btn {
     left: 300px;
@@ -60,11 +53,3 @@ button {
     right: 315px;
 }
 
-/****Text underneath choice screen****/
-.directions {
-    margin-top: 0;
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 0;
-    
-}

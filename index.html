@@ -15,12 +15,29 @@
     <body>
         <div class="outer-container">
             <h1 id="game_title">Rock Paper Scissors</h1>
+            <h2>Round <span id="roundNum"></span></h2>
             <div class="main_screen">
-                <img src="images/alt_main.png" alt="Image of a rock, a crumpled up piexe of paper, and a pair of scissors." class="main_img" />
+                <h3>Choose you move:</h3>
+                <img src="images/alt_main.png" alt="Image of a rock, a crumpled up piece of paper, and a pair of scissors." class="main_img" />
+                <button id="rock_btn">Play rock</button>
+                <button id="paper_btn">Play paper</button>
+                <button id="scissors_btn">Play scissors</button>
+                <div id="score_table">
+                    <div>
+                        <p>Your Score</p>
+                        <span id="player_score"></span>
+                    </div>
+                    <div>
+                        <p>Computer Score</p>
+                        <span id="computer_score"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="feedback_text"></p>
+                </div>
 
             </div>
-            <!--How would I load an updated main_screen on click without loading a new page?-->
-            <a href="main.html" ><button id="start">Click to begin</button></a>
+           
         </div>
     <script src="script.js"></script>
     </body>

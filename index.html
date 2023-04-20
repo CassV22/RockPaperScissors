@@ -15,19 +15,27 @@
     <body>
         <div class="outer-container">
             <h1 id="game_title">Rock Paper Scissors</h1>
-            <h2>Round <span id="roundNum"></span></h2>
-            <div class="main_screen">
-                <h3>Choose you move:</h3>
-                <img src="images/alt_main.png" alt="Image of a rock, a crumpled up piece of paper, and a pair of scissors." class="main_img" />
-                <button id="rock_btn">Play rock</button>
-                <button id="paper_btn">Play paper</button>
-                <button id="scissors_btn">Play scissors</button>
+
+            <h2 id="round_title">Round <span id="roundNum">1</span></h2>   
+                
+
+                <div class="main_screen">
+                    <h3 class="directions">Choose your move:</h3>
+                    <img src="images/alt_main.png" alt="Image of a rock, a crumpled up piece of paper, and a pair of scissors." class="main_img" />
+                    <div class="button-container">
+                        <button id="rock_btn">Play rock</button>
+                        <button id="paper_btn">Play paper</button>
+                        <button id="scissors_btn">Play scissors</button>
+                    </div>
+                    
+                </div>
+                
                 <div id="score_table">
-                    <div>
+                    <div class="scoreL">
                         <p>Your Score</p>
                         <span id="player_score"></span>
                     </div>
-                    <div>
+                    <div class="scoreR">
                         <p>Computer Score</p>
                         <span id="computer_score"></span>
                     </div>
@@ -36,7 +44,7 @@
                     <p id="feedback_text"></p>
                 </div>
 
-            </div>
+            
            
         </div>
     <script src="script.js"></script>

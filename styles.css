@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100%;
     background-color: #A5C4FE;
-    font-family: 'Arima', cursive;
+    font-family: 'Arima', cursive;  
         
 }
 
@@ -26,6 +26,8 @@ body {
 .directions {
     font-size: 25px;
     margin-left: 20%;
+    margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 .main_img {
@@ -46,6 +48,18 @@ button {
     display: block;
     margin-bottom: 87px;
     font-weight: bold;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+    
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px #999;
 }
 
 .button-container {
@@ -77,18 +91,42 @@ button {
     padding-right: 25px;
     margin-top: 15px;
     padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .scoreR {
     padding-bottom: 20px;
+    
 }
 
 .scoreR p{
     border-bottom: 3px solid #020D5F;
-     padding-right: 15px;
+    padding-right: 15px;
     padding-left: 25px;
     margin-top: 15px;
     padding-bottom: 10px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#player_score, #computer_score {
+    font-weight: bold;
+    font-size: 30px;    
+}
+
+.feedback-container {
+    position: absolute;
+    right: 100px;
+    bottom: 200px;
+    font-family: 'Passion One', cursive;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #033BBF;
+}
+
+#feedback_text {
+    
 }
 /****Button to choose rock, paper, or scissors****/
 

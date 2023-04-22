@@ -2,33 +2,41 @@
 const rock = 1;
 const paper = 2;
 const scissors = 3;
-let n = Math.random();
-let computerChoice = Math.floor(n*3) + 1 ; 
+// let n = Math.random();
+// let computerChoice = Math.floor(n*3) + 1 ; 
+let computerChoice;
 let changeFeedback = document.getElementById("feedback_text");
 let roundNum = document.getElementById("roundNum");
-let computerScore = document.getElementById("computer_score");
-let playerScore = document.getElementById("player_score");
+let computerScore = document.getElementById("computer_score").innerHTML;
+let playerScore = document.getElementById("player_score").innerHTML;
 let buttons = document.querySelectorAll("button");
 
 let count = 1;
 buttons.forEach(button => button.addEventListener("click", function(){
+    //gets the id of the button that was clicked
     let playerChoice = this.getAttribute('id');
-    
+    // debugger 
+    computerPlay();
     if (playerChoice == "rock_btn") {
-        playRock();
+        playRock(computerChoice);
         console.log("Rock function called.");
     } else if (playerChoice == "paper_btn") {
-        playPaper();
+        playPaper(computerChoice);
         console.log("Paper function called.");
     } else if (playerChoice == "scissors_btn") {
-        playScissor();
+        playScissor(computerChoice);
         console.log("Scissors function called.");
     }
     
-    console.log(computerChoice);
+    
  }));
 
-
+function computerPlay() {
+    let n = Math.random();
+    computerChoice = Math.floor(n*3) + 1 ; 
+    console.log(computerChoice);
+    return computerChoice;
+}
 
 
 //add point according to who won
@@ -38,7 +46,7 @@ function playRock(computerChoice) {
     } else if (computerChoice == 2) {
         computerScore += 1;
         changeFeedback.innerHTML = "You lose. Paper covers rock.";  
-    } else {
+    } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "You win! Rock beats scissors.";
     }
 }
@@ -48,7 +56,7 @@ function playPaper(computerChoice) {
         changeFeedback.innerHTML = "You win! Paper covers rock.";
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML =  "It's a tie. No points awarded.";            
-    } else {
+    } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "You lose. Scissors cuts paper.";
     }
 }
@@ -59,7 +67,7 @@ function playScissor(computerChoice) {
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML = "You win! Scissors cuts paper.";  
         computerScore += 1;
-    } else {
+    } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "It's a tie. No points awarded.";
     }
 }

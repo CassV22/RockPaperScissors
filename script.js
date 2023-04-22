@@ -7,11 +7,18 @@ const scissors = 3;
 let computerChoice;
 let changeFeedback = document.getElementById("feedback_text");
 let roundNum = document.getElementById("roundNum");
-let computerScore = document.getElementById("computer_score").innerHTML;
-let playerScore = document.getElementById("player_score").innerHTML;
+
+let computerScore = 0;
+let changeComputerScore = document.getElementById("computer_score");
+
+let playerScore = 0;
+let changePlayerScore = document.getElementById("player_score");
+
+
 let buttons = document.querySelectorAll("button");
 
 let count = 1;
+
 buttons.forEach(button => button.addEventListener("click", function(){
     //gets the id of the button that was clicked
     let playerChoice = this.getAttribute('id');
@@ -28,6 +35,11 @@ buttons.forEach(button => button.addEventListener("click", function(){
         console.log("Scissors function called.");
     }
     
+   
+    console.log(computerScore);
+    console.log(playerScore);
+    //while playerScore and computerScore are less than 6, add to count and change roundNum.innerHTML to count
+    //stop function at this point
     
  }));
 
@@ -43,30 +55,36 @@ function computerPlay() {
 function playRock(computerChoice) {
     if (computerChoice == 1) {
         changeFeedback.innerHTML = "It's a tie. No points awarded.";        
-    } else if (computerChoice == 2) {
-        computerScore += 1;
+    } else if (computerChoice == 2) {        
         changeFeedback.innerHTML = "You lose. Paper covers rock.";  
+        computerScore += 1;
+        changeComputerScore.innerHTML = computerScore.toString();
     } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "You win! Rock beats scissors.";
+        playerScore += 1;
+        changePlayerScore.innerHTML = playerScore.toString();
     }
 }
 
 function playPaper(computerChoice) {
     if (computerChoice == 1) {
         changeFeedback.innerHTML = "You win! Paper covers rock.";
+        return playerScore += 1;
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML =  "It's a tie. No points awarded.";            
     } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "You lose. Scissors cuts paper.";
+        return computerScore += 1;
     }
 }
 
 function playScissor(computerChoice) {
     if (computerChoice == 1) {
-        changeFeedback.innerHTML = "You lose. Rock beats scissors." ;        
+        changeFeedback.innerHTML = "You lose. Rock beats scissors." ;  
+        return computerScore += 1;      
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML = "You win! Scissors cuts paper.";  
-        computerScore += 1;
+        return playerScore += 1;        
     } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "It's a tie. No points awarded.";
     }

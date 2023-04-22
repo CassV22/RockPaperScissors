@@ -6,6 +6,8 @@ const scissors = 3;
 // let computerChoice = Math.floor(n*3) + 1 ; 
 let computerChoice;
 let changeFeedback = document.getElementById("feedback_text");
+
+let round = 1;
 let roundNum = document.getElementById("roundNum");
 
 let computerScore = 0;
@@ -19,7 +21,8 @@ let buttons = document.querySelectorAll("button");
 
 let count = 1;
 
-buttons.forEach(button => button.addEventListener("click", function(){
+
+buttons.forEach(button => button.addEventListener("click", function(){   
     //gets the id of the button that was clicked
     let playerChoice = this.getAttribute('id');
     // debugger 
@@ -35,12 +38,24 @@ buttons.forEach(button => button.addEventListener("click", function(){
         console.log("Scissors function called.");
     }
     
-   
-    
-    //while playerScore and computerScore are less than 6, add to count and change roundNum.innerHTML to count
+    //changes round number
+    round +=1;
+    roundNum.innerHTML = round.toString();
+       
     //stop function at this point
+    if (playerScore == 5 || computerScore == 5) {
+
+        buttons.forEach(button => button.disabled = true);
+        
+        if (playerScore > computerScore) {
+          changeFeedback.innerHTML = "Congratulations winner!";
+        } else{
+          changeFeedback.innerHTML = "You lost. Better luck next time.";
+        }
+    } 
     
  }));
+
 
 function computerPlay() {
     let n = Math.random();

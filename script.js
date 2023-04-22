@@ -36,8 +36,7 @@ buttons.forEach(button => button.addEventListener("click", function(){
     }
     
    
-    console.log(computerScore);
-    console.log(playerScore);
+    
     //while playerScore and computerScore are less than 6, add to count and change roundNum.innerHTML to count
     //stop function at this point
     
@@ -69,22 +68,26 @@ function playRock(computerChoice) {
 function playPaper(computerChoice) {
     if (computerChoice == 1) {
         changeFeedback.innerHTML = "You win! Paper covers rock.";
-        return playerScore += 1;
+        playerScore += 1;
+        changePlayerScore.innerHTML = playerScore.toString();
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML =  "It's a tie. No points awarded.";            
     } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "You lose. Scissors cuts paper.";
-        return computerScore += 1;
+        computerScore += 1;
+        changeComputerScore.innerHTML = computerScore.toString();
     }
 }
 
 function playScissor(computerChoice) {
     if (computerChoice == 1) {
         changeFeedback.innerHTML = "You lose. Rock beats scissors." ;  
-        return computerScore += 1;      
+        computerScore += 1;   
+        changeComputerScore.innerHTML = computerScore.toString();   
     } else if (computerChoice == 2) {
         changeFeedback.innerHTML = "You win! Scissors cuts paper.";  
-        return playerScore += 1;        
+        playerScore += 1;      
+        changePlayerScore.innerHTML = playerScore.toString();  
     } else if (computerChoice == 3) {
         changeFeedback.innerHTML = "It's a tie. No points awarded.";
     }

@@ -9,7 +9,10 @@
         <title>Rock Paper Scissors</title>
 
         <!--Link to stylesheet and fonts-->
-        <link rel="stylesheet" href="styles.css" href="https://fonts.googleapis.com/css2?family=Arima:wght@200;300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">       
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima:wght@200;300;400;500;600;700&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -18,7 +21,7 @@
 
             <h2 id="round_title">Round <span id="roundNum">1</span></h2>   
                 
-
+            <div class="inner-container">
                 <div class="main_screen">
                     <h3 class="directions">Choose your move:</h3>
                     <img src="images/alt_main.png" alt="Image of a rock, a crumpled up piece of paper, and a pair of scissors." class="main_img" />
@@ -33,16 +36,18 @@
                 <div id="score_table">
                     <div class="scoreL">
                         <p>Your Score</p>
-                        <span id="player_score"></span>
+                        <span id="player_score">0</span>
                     </div>
                     <div class="scoreR">
                         <p>Computer Score</p>
-                        <span id="computer_score"></span>
+                        <span id="computer_score">0</span>
                     </div>
                 </div>
-                <div>
-                    <p id="feedback_text"></p>
+                <div class="feedback-container">
+                    <p id="feedback_text">Feedback goes here.</p>
                 </div>
+            </div>
+                
 
             
            

@@ -117,12 +117,15 @@ button:active {
 
 .feedback-container {
     position: absolute;
-    right: 100px;
-    bottom: 200px;
+    right: 80px;
+    bottom: 180px;
     font-family: 'Passion One', cursive;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bolder;
     color: #033BBF;
+    width: 350px;
+    text-align: left;
+    /* border: 1px solid black; */
 }
 
 #feedback_text {
